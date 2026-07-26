@@ -1,0 +1,368 @@
+/* Simpla Home – statischer Klon
+   Design-Tokens aus der Live-Site extrahiert (Avada/Fusion CSS) */
+
+:root {
+  --color-bg: #ffffff;
+  --color-bg-alt: #f4f6f8;
+  --color-border: #dbe2ea;
+  --color-accent: #64af23;
+  --color-accent-dark: #4c841a;
+  --color-text: #434b56;
+  --color-text-dark: #21212c;
+
+  --font-family: Roboto, Arial, Helvetica, sans-serif;
+
+  --content-max-width: 1216px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.4705882353;
+  letter-spacing: -0.022em;
+  color: var(--color-text);
+  background: var(--color-bg);
+  overflow-wrap: break-word;
+}
+
+a {
+  color: var(--color-accent-dark);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+h1, h2 {
+  color: var(--color-text-dark);
+  font-weight: 500;
+  margin: 0.1em 0 0.35em;
+}
+
+h1 {
+  font-size: clamp(1.5em, 1.1em + 1.6vw, 2em);
+  line-height: 1.07143;
+  letter-spacing: -0.005em;
+}
+
+h2 {
+  font-size: 1.3em;
+  font-weight: 400;
+  line-height: 1.4705882353;
+  letter-spacing: -0.022em;
+  margin-top: 0.4em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+.container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header (Aufbau wie auf der Originalseite, ohne Konto-/Warenkorb-Icons) */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.69);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 1px 9px 0 var(--color-border);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.site-header .logo-link {
+  display: inline-block;
+  line-height: 0;
+  margin: 6px 0;
+}
+
+.site-header .logo {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+}
+
+/* Main content */
+
+main {
+  flex: 1 0 auto;
+  padding: 64px 0;
+}
+
+.contact-block {
+  max-width: 640px;
+}
+
+.contact-block .email-link {
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin: 0.5em 0 1.5em;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.68;
+}
+
+/* Legal pages (Impressum / Datenschutz) */
+
+.legal dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4em 1.5em;
+  margin: 0 0 2em;
+}
+
+.legal dt {
+  font-weight: 500;
+  color: var(--color-text-dark);
+}
+
+.legal dd {
+  margin: 0;
+}
+
+.legal section {
+  max-width: 760px;
+  margin-bottom: 2em;
+}
+
+.legal .attribution {
+  margin-top: 2em;
+  font-size: 0.9em;
+  color: #475866;
+}
+
+/* Footer (Aufbau wie auf der Originalseite, Spalten auf das Nötige gekürzt) */
+
+.site-footer {
+  flex-shrink: 0;
+  background: var(--color-bg);
+  padding-bottom: 20px;
+}
+
+.site-footer .sep {
+  border-top: 1px solid var(--color-border);
+  margin-bottom: 20px;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-columns nav {
+  width: 50%;
+  padding-right: 3.84%;
+}
+
+.footer-columns ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-columns a {
+  display: block;
+  padding: 2px 0;
+  color: var(--color-text);
+  line-height: 1.4705882353;
+}
+
+.footer-columns a:hover,
+.footer-columns a:focus {
+  color: var(--color-accent-dark);
+}
+
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.9em;
+  color: #475866;
+}
+
+.footer-legal p {
+  margin: 0;
+}
+
+.footer-legal .copyright {
+  width: 50%;
+  padding-right: 3.84%;
+}
+
+.footer-legal .rights {
+  width: 25%;
+}
+
+/* 404-Seite (Aufbau wie /de/404/ auf der Originalseite) */
+
+main.error-main {
+  padding: 0;
+}
+
+.error-hero {
+  background-color: var(--color-bg);
+  background-image: url("../img/soil-bg.webp");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: cover;
+  padding: 100px 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.error-hero h1 {
+  color: #ffffff;
+  font-size: 33px;
+  font-weight: 500;
+  line-height: 1.07143;
+  letter-spacing: -0.005em;
+  margin: 35px 0 0;
+}
+
+.error-hero .subtitle {
+  font-size: 26.4px;
+  font-weight: 400;
+  line-height: 1.14286;
+  letter-spacing: 0.007em;
+  margin: 0.6em 0 0;
+}
+
+.error-hero p {
+  font-size: 1.3em;
+  line-height: 1.4705882353;
+  margin: 0.9em 0 0;
+}
+
+/* Responsive: Tablet (Portrait, ~768–1024px) */
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  main {
+    padding: 48px 0;
+  }
+
+  main.error-main {
+    padding: 0;
+  }
+}
+
+/* Responsive: Tablet (Portrait) / große Smartphones (~600–768px) */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .site-header .logo {
+    max-width: 180px;
+  }
+
+  .legal dl {
+    grid-template-columns: 1fr;
+    gap: 0.15em 0 1em;
+  }
+
+  .legal dt {
+    margin-top: 0.6em;
+  }
+
+  .footer-columns nav {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .footer-columns nav + nav {
+    margin-top: 12px;
+  }
+
+  .footer-legal .copyright,
+  .footer-legal .rights {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+/* Responsive: Smartphones (bis ~480px) */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .site-header .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .site-header .logo {
+    max-width: 140px;
+  }
+
+  main {
+    padding: 32px 0;
+  }
+
+  .contact-block .email-link {
+    font-size: 1.05em;
+    word-break: break-word;
+  }
+
+  .error-hero {
+    padding: 64px 0;
+  }
+
+  .error-hero h1 {
+    font-size: 28px;
+    margin-top: 0;
+  }
+
+  .error-hero .subtitle {
+    font-size: 22px;
+  }
+
+  .error-hero p {
+    font-size: 1.1em;
+  }
+}
+
+/* Landscape phones with reduced height */
+
+@media (max-height: 420px) and (orientation: landscape) {
+  main {
+    padding: 24px 0;
+  }
+}

@@ -1,0 +1,8 @@
+.DS_Store
+
+# Server-Konfiguration - darf nicht mit deployt werden
+*.nginx
+*.snippet
+
+# Rohvorlage der Anleitung (WordPress-Speicherung), nur als Arbeitskopie
+Bedienungsanleitung Soil Pro - Simpla Home.html
